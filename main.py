@@ -23,6 +23,16 @@ def download_file_from_android(file_path_on_device, destination_path_on_pc):
 
 # Укажите путь к файлу на устройстве Android и путь на ПК, куда файл будет скачан
 
+# adb backup [опции] <приложения>
+# хочу добавить кнопку для бэкапа
+# adb restore c:\android\backup.ab восстановление бэкапа
+# adb shell screenrecord --size 1280x720 --bit-rate 6000000 --time-limit 20 --verbose /sdcard/video.mp4 это запись видео тайм лимит можно убрать(макс 180сек)
+# pm list packages список установленных приложений
+# am kill com.android.browser
+# am kill-all
+# am start -a android.intent.action.CALL tel:8918231875 он реально позвонит по указанному телефону
+# am start -a android.intent.action.VIEW 'http:/xakep.ru'
+# input keyevent 82 https://xakep.ru/2016/05/12/android-adb/
 if __name__ == "__main__":
     
     print(START_MESSAGE)

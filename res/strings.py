@@ -1,5 +1,7 @@
 FILE_PATH_ON_DEVICE = "/sdcard/Documents"
 DESTINATION_PATH_ON_PC = "K:MyPhone"
+TITLE = "Deplozile"
+
 
 START_MESSAGE = """"   ██████╗░███████╗██████╗░██╗░░░░░░█████╗░███████╗██╗██╗░░░░░███████╗
     ██╔══██╗██╔════╝██╔══██╗██║░░░░░██╔══██╗╚════██║██║██║░░░░░██╔════╝
