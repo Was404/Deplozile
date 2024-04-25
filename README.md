@@ -1,5 +1,7 @@
 # Deplozile ADB
->NOTE: *Необходимо **adb** для работы*
+>[!Note] *Необходимо **adb** для работы* 
+<sup><strong>ADB:</strong></sup>[![Download](https://developer.android.com/tools/adb)]
+![pic](res\pic\wha-the-hell.jpg)
 
 Инструмент для резервной копии с Android устройства на Windows PC.
 

@@ -16,7 +16,7 @@ def main():
 
     root['bg'] = '#808080' #background color
     root.title(TITLE)
-    #root.iconbitmap("path_to_icon.ico") # Установка иконки окна
+    root.iconbitmap("res\pic\logo1.ico") # Установка иконки окна
     root.wm_attributes('-alpha', 0.9) # прозрачность
     root.geometry('340x460')
     root.resizable(width=False, height=False)
