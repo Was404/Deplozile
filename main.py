@@ -41,8 +41,10 @@ def is_adb_available():
         logging.debug('start up adb attempt')
         subprocess.run(["adb", "--version"], stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
         return True
-    except subprocess.CalledProcessError:
+    except subprocess.CalledProcessError as e:
+        logging.warning(e)
         return False
+    
 def download_file_from_android(file_path_on_device, destination_path_on_pc):
     logging.debug('pull attempt')
     adb_command = f"adb pull {file_path_on_device} {destination_path_on_pc}"
@@ -55,6 +57,7 @@ def download_file_from_android(file_path_on_device, destination_path_on_pc):
         print(f"Файл успешно скачан на ПК: {destination_path_on_pc}")
     except subprocess.CalledProcessError as e:
         print(f"Произошла ошибка при скачивании файла: {e}")
+        logging.error(f"Произошла ошибка при скачивании файла: {e}")
 
 def Create_backup():# Не готоВ!! НУжны опции
     print('Данная функция не работает как надо, но она уже запущена я хз че будет\n!! ENTER CTRL + C !!')
