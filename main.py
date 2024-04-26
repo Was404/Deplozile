@@ -2,7 +2,7 @@ import subprocess
 import json
 import logging
 from tqdm import tqdm
-from res.strings import FILE_PATH_ON_DEVICE, START_MESSAGE, DESTINATION_PATH_ON_PC
+from res.strings import FILE_PATH_ON_DEVICE, START_MESSAGE, DESTINATION_PATH_ON_PC, GIT_LINK
 
 logging.basicConfig(filename='logs.log', level=logging.DEBUG)
 
@@ -98,5 +98,6 @@ def Main_menu():
 
 if __name__ == "__main__":
     print(START_MESSAGE)
+    print("check new version:", GIT_LINK)
     download_file_from_android(FILE_PATH_ON_DEVICE, DESTINATION_PATH_ON_PC)
     Main_menu()

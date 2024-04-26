@@ -8,3 +8,9 @@ DEBUG:root:start up Main_menu attempt
 DEBUG:root:pull attempt
 DEBUG:root:start up adb attempt
 ERROR:root:Произошла ошибка при скачивании файла: Command 'adb pull /sdcard/Documents K:MyPhone' returned non-zero exit status 1.
+DEBUG:root:pull attempt
+DEBUG:root:pull attempt
+DEBUG:root:start up adb attempt
+ERROR:root:Произошла ошибка при скачивании файла: Command 'adb pull /sdcard/Documents K:MyPhone' returned non-zero exit status 1.
+DEBUG:root:start up Main_menu attempt
+DEBUG:root:start up Hack_my_phone attempt
