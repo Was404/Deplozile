@@ -23,9 +23,6 @@ def main():
 
     btn_wake_up = tk.Button(text="btn wake up")
     btn_wake_up.pack()
-    # Example print statements
-    #print("This will be redirected to the Tkinter Text widget.")
-    #print("You can also see this in the console.")
     #root.after(500,) #вызов функции через 0.5 сек
     root.mainloop()
 

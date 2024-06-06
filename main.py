@@ -1,12 +1,13 @@
 import subprocess
 import json
 import logging
-from tqdm import tqdm
+#from tqdm import tqdm
 from res.strings import FILE_PATH_ON_DEVICE, START_MESSAGE, DESTINATION_PATH_ON_PC, GIT_LINK
 
-logging.basicConfig(filename='logs.log', level=logging.DEBUG)
+logging.basicConfig(filename='logs.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 
 try:
+    logging.info("try open keyevents.json")
     with open('res\keyevents.json') as f:
         key_events_data = json.load(f)
 except:
@@ -14,10 +15,10 @@ except:
 
 
 slovar = {
-    "1": "download_file_from_android",
-    "2": "Hack_my_phone",
-    "3": "Create_backup",
-    "4": "Snif_data"
+    1: "[1] download_file_from_android",
+    2: "[2] Hack_my_phone",
+    3: "[3] Create_backup",
+    4: "[4] Snif_data"
 }    
 
 def LoggerOn():
@@ -83,8 +84,8 @@ def Hack_my_phone():
 
 def Main_menu():
     logging.debug('start up Main_menu attempt')
-    print(slovar)
-    answer = int(input())
+    print(f"Choose function:\n{slovar[1]};\n{slovar[2]};\n{slovar[3]};\n{slovar[4]}")
+    answer = input()
     match answer:
         case 1:
             download_file_from_android(FILE_PATH_ON_DEVICE, DESTINATION_PATH_ON_PC)

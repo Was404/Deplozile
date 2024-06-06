@@ -2,9 +2,6 @@
 >[!Note] *Необходимо **adb** для работы* 
 <sup><strong>ADB:</strong></sup>[![Download](https://developer.android.com/tools/adb)]
 
-
-![pic](https://github.com/Was404/Deplozile/blob/main/res/pic/wha-the-hell.jpg)
-
 Инструмент для резервной копии с Android устройства на Windows PC.
 
 ## Using

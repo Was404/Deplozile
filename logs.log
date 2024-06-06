@@ -1,16 +1,27 @@
-DEBUG:root:pull attempt
-DEBUG:root:start up adb attempt
-DEBUG:root:start up Main_menu attempt
-DEBUG:root:pull attempt
-DEBUG:root:start up adb attempt
-ERROR:root:Произошла ошибка при скачивании файла: Command 'adb pull /sdcard/Documents K:MyPhone' returned non-zero exit status 1.
-DEBUG:root:start up Main_menu attempt
-DEBUG:root:pull attempt
-DEBUG:root:start up adb attempt
-ERROR:root:Произошла ошибка при скачивании файла: Command 'adb pull /sdcard/Documents K:MyPhone' returned non-zero exit status 1.
-DEBUG:root:pull attempt
-DEBUG:root:pull attempt
-DEBUG:root:start up adb attempt
-ERROR:root:Произошла ошибка при скачивании файла: Command 'adb pull /sdcard/Documents K:MyPhone' returned non-zero exit status 1.
-DEBUG:root:start up Main_menu attempt
-DEBUG:root:start up Hack_my_phone attempt
+2024-04-26 19:04:25,816 - DEBUG - pull attempt
+2024-04-26 19:04:25,904 - DEBUG - start up adb attempt
+2024-04-26 19:04:26,008 - ERROR - Произошла ошибка при скачивании файла: Command 'adb pull /sdcard/Documents K:MyPhone' returned non-zero exit status 1.
+2024-04-26 19:04:26,008 - DEBUG - start up Main_menu attempt
+2024-04-26 19:04:28,799 - DEBUG - pull attempt
+2024-04-26 19:04:28,868 - DEBUG - start up adb attempt
+2024-04-26 19:04:28,955 - ERROR - Произошла ошибка при скачивании файла: Command 'adb pull /sdcard/Documents K:MyPhone' returned non-zero exit status 1.
+2024-04-28 22:13:36,319 - INFO - try open keyevents.json
+2024-04-28 22:13:36,334 - DEBUG - pull attempt
+2024-04-28 22:13:36,744 - DEBUG - start up adb attempt
+2024-04-28 22:13:36,893 - ERROR - Произошла ошибка при скачивании файла: Command 'adb pull /sdcard/Documents K:MyPhone' returned non-zero exit status 1.
+2024-04-28 22:13:36,903 - DEBUG - start up Main_menu attempt
+2024-04-28 22:13:43,019 - DEBUG - pull attempt
+2024-04-28 22:13:43,085 - DEBUG - start up adb attempt
+2024-04-28 22:13:43,188 - ERROR - Произошла ошибка при скачивании файла: Command 'adb pull /sdcard/Documents K:MyPhone' returned non-zero exit status 1.
+2024-04-28 22:17:36,347 - INFO - try open keyevents.json
+2024-04-28 22:17:36,347 - DEBUG - pull attempt
+2024-04-28 22:17:36,426 - DEBUG - start up adb attempt
+2024-04-28 22:17:36,620 - DEBUG - start up Main_menu attempt
+2024-04-28 22:18:17,733 - INFO - try open keyevents.json
+2024-04-28 22:18:17,733 - DEBUG - pull attempt
+2024-04-28 22:18:17,808 - DEBUG - start up adb attempt
+2024-04-28 22:18:17,941 - DEBUG - start up Main_menu attempt
+2024-04-28 22:18:49,511 - INFO - try open keyevents.json
+2024-04-28 22:18:49,511 - DEBUG - pull attempt
+2024-04-28 22:18:49,593 - DEBUG - start up adb attempt
+2024-04-28 22:18:49,711 - DEBUG - start up Main_menu attempt
